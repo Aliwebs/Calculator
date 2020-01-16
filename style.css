@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #77a1d3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e684ae,
+    #79cbca,
+    #77a1d3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e684ae,
+    #79cbca,
+    #77a1d3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3px;
+  grid-auto-rows: minmax(100px, auto);
+  width: 20%;
+  margin: auto;
+  margin-top: 10vh;
+  height: 80vh;
+  background-color: white;
+}
+
+#output {
+  grid-column: 1 / 5;
+  grid-row: 1;
+  background-color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 5vh;
+  text-align: right;
+  color: white;
+}
+
+#output.break {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 80px;
+}
+
+#span-two {
+  grid-column: 1/2;
+  grid-row: 2;
+}
+
+#total {
+  grid-column: 3/5;
+  grid-row: 6;
+}
+
+#calculator > button {
+  border: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 4vh;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+#calculator > button:hover {
+  cursor: pointer;
+  background-color: teal;
+}
+
+.longPressDel {
+  background-color: black;
+  -webkit-animation-name: changeToRed; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: changeToRed;
+  animation-duration: 1s;
+}
+
+@keyframes changeToRed {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: red;
+  }
+}
